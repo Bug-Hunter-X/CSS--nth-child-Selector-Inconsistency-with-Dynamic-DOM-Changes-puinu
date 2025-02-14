@@ -1,0 +1,21 @@
+/* bugSolution.css */
+
+/* Instead of using :nth-child, apply classes dynamically using JavaScript */
+.listItem {
+  /* Styles for list items */
+}
+
+.listItem:nth-of-type(odd) {
+  background-color: lightgray;
+}
+
+/* Example -  Dynamically add classes in Javascript*/
+// Javascript code to add class dynamically (Example)
+const listItems = document.querySelectorAll('.listItem');
+listItems.forEach((item, index) => {
+  if (index % 2 === 0) {
+    item.classList.add('even');
+  } else {
+    item.classList.add('odd');
+  }
+});
